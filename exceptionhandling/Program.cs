@@ -10,8 +10,6 @@ namespace exceptionhandling
     {
         static void Main(string[] args)
         {
-
-           
             try
             {
                 List<int> numerals = new List<int> { 12, 7, 55, 33, 70, 50 };
@@ -21,24 +19,24 @@ namespace exceptionhandling
                 for (int a = 0; a < numerals.Count; a++)
                 {
                     var result1 = numerals[a] / numb;
-                    Console.WriteLine(result1);
-                    
                 }
-
             }
-            catch ( Exception ex)
+            catch (FormatException ex)
             {
-                Console.WriteLine(ex);
-                return;
-               
+                Console.WriteLine(ex.Message);
+                return;             
+            }
+            catch (DivideByZeroException )
+            {
+                Console.WriteLine("dont divide by zero");
             }
             finally
             {
-                Console.ReadLine(); 
+                Console.WriteLine("It has emerged VICTORIOUSLY!.. WELL DONE!!!!. NOW PAY THE $9.99 FEE MINION!!!!!!" );
+                
             }
+            Console.ReadLine();
 
-            
-            
             //int[] numArray3 = { 10, 2, 10, 200, 5000 };
 
             //Console.WriteLine("pick a number");
@@ -55,18 +53,6 @@ namespace exceptionhandling
             // added decimals and it gave me input was wrong format
             // added zero and it gave me wrong format
             //added string gave me wrong format
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
