@@ -24,15 +24,17 @@ namespace exceptionhandling
             catch (FormatException ex)
             {
                 Console.WriteLine(ex.Message);
-                return;             
+                          
             }
             catch (DivideByZeroException )
             {
                 Console.WriteLine("dont divide by zero");
+                throw;
             }
             finally
             {
-                Console.WriteLine("It has emerged VICTORIOUSLY!.. WELL DONE!!!!. NOW PAY THE $9.99 FEE MINION!!!!!!" );
+                Console.WriteLine("In finally block" );
+                
                 
             }
             Console.ReadLine();
