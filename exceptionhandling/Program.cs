@@ -29,7 +29,7 @@ namespace exceptionhandling
             catch (DivideByZeroException )
             {
                 Console.WriteLine("dont divide by zero");
-                throw;
+                
             }
             finally
             {
